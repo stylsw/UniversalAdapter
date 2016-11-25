@@ -27,7 +27,7 @@ public class ViewHolder {
     }
 
 
-    public static ViewHolder get(Context context, View convertView,
+    public static ViewHolder createViewHolder(Context context, View convertView,
                                  ViewGroup parent, int layoutId, int position)
     {
         if (convertView == null)
@@ -68,8 +68,7 @@ public class ViewHolder {
         return mConvertView;
     }
 
-    public int getLayoutId()
-    {
+    public int getItemViewType() {
         return mLayoutId;
     }
 

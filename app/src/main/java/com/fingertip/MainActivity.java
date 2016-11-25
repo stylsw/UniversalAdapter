@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             @Override
-            public void bindItemView(ViewHolder viewHolder, Object data, int itemLayoutId, int position) {
-                switch (itemLayoutId) {
+            public void onBindItemView(ViewHolder viewHolder, Object data, int position) {
+                switch (viewHolder.getItemViewType()) {
                     case R.layout.item:
                         String content = (String) data;
                         TextView tv = viewHolder.getView(R.id.tv);

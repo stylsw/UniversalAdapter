@@ -64,11 +64,11 @@ public abstract class UniversalAdapter<T> extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         int mItemLayoutId = null == mItemTypeArray ? this.mItemLayoutId : getItemViewType(position);
-        ViewHolder viewHolder = ViewHolder.get(mContext,view,viewGroup, mItemLayoutId,position);
-        bindItemView(viewHolder,mData.get(position),mItemLayoutId,position);
+        ViewHolder viewHolder = ViewHolder.createViewHolder(mContext,view,viewGroup, mItemLayoutId,position);
+        onBindItemView(viewHolder,mData.get(position),position);
         return viewHolder.getConvertView();
     }
 
-    public abstract void bindItemView(ViewHolder viewHolder,T data,int itemLayoutId,int position);
+    public abstract void onBindItemView(ViewHolder viewHolder,T data,int position);
 
 }
