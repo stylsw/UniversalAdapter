@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         datas.add("item 8");
         datas.add(R.mipmap.ic_launcher);
         datas.add("item 9");
+        datas.add(R.mipmap.ic_launcher);
+        datas.add("item 10");
 
         ItemType[] itemTypes = new ItemType[]{new ItemType(R.layout.item,String.class),new ItemType(R.layout.item1,Integer.class)};
         mLv.setAdapter(new UniversalAdapter(MainActivity.this, datas, itemTypes) {
