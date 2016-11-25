@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mLv = (ListView) findViewById(R.id.mLv);
 
         List<Object> datas = new ArrayList<>();
+        datas.add("item 0");
         datas.add("item 1");
         datas.add("item 2");
         datas.add(R.mipmap.ic_launcher);
